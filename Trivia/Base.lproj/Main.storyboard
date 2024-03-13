@@ -115,6 +115,16 @@
                             <constraint firstItem="y0o-vz-fqS" firstAttribute="centerX" secondItem="igq-Dg-cly" secondAttribute="centerX" id="rnh-Ir-kvw"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="answerButton1" destination="y0o-vz-fqS" id="MUj-nu-ogZ"/>
+                        <outlet property="answerButton2" destination="8Nl-wi-FUI" id="XFo-nh-BTU"/>
+                        <outlet property="answerButton3" destination="8S8-lv-3CO" id="dde-jp-ROb"/>
+                        <outlet property="answerButton4" destination="LwW-9C-dVK" id="AGD-MW-1Dl"/>
+                        <outlet property="categoryLabel" destination="8om-SX-dHE" id="J7s-Af-lav"/>
+                        <outlet property="currentQuestionNumber" destination="O7N-Wb-1Uc" id="XtE-LT-b3u"/>
+                        <outlet property="questionLabel" destination="KQJ-uw-yRc" id="gxP-Rn-luC"/>
+                        <outlet property="questionWindow" destination="qpf-0L-SOp" id="eSo-cs-PVL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RrE-tO-QXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
