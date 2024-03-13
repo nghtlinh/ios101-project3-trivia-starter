@@ -20,23 +20,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-0L-SOp" userLabel="Question Container View">
                                 <rect key="frame" x="16" y="188" width="361" height="300"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This is a question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KQJ-uw-yRc" userLabel="Question label">
-                                        <rect key="frame" x="16" y="-9" width="329" height="293"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Question label" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hw1-mK-QSj">
+                                        <rect key="frame" x="20" y="40" width="321" height="220"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="KQJ-uw-yRc" firstAttribute="top" secondItem="qpf-0L-SOp" secondAttribute="top" constant="16" id="BjB-4z-iP5"/>
-                                    <constraint firstAttribute="bottom" secondItem="KQJ-uw-yRc" secondAttribute="bottom" constant="16" id="CNK-KJ-WnD"/>
+                                    <constraint firstItem="Hw1-mK-QSj" firstAttribute="centerY" secondItem="qpf-0L-SOp" secondAttribute="centerY" id="0r9-FO-cnH"/>
+                                    <constraint firstAttribute="bottom" secondItem="Hw1-mK-QSj" secondAttribute="bottom" constant="40" id="EgL-Ar-o5t"/>
                                     <constraint firstAttribute="height" constant="300" id="UqV-gS-ef1"/>
-                                    <constraint firstItem="KQJ-uw-yRc" firstAttribute="top" secondItem="qpf-0L-SOp" secondAttribute="top" constant="-9" id="Vpr-kk-qS0"/>
                                     <constraint firstAttribute="width" constant="361" id="Y35-gE-p4r"/>
-                                    <constraint firstItem="KQJ-uw-yRc" firstAttribute="centerX" secondItem="qpf-0L-SOp" secondAttribute="centerX" id="cyL-l8-uNB"/>
-                                    <constraint firstItem="KQJ-uw-yRc" firstAttribute="leading" secondItem="qpf-0L-SOp" secondAttribute="leading" constant="16" id="hsu-zW-kOX"/>
-                                    <constraint firstAttribute="trailing" secondItem="KQJ-uw-yRc" secondAttribute="trailing" constant="16" id="nlH-ge-gWa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Hw1-mK-QSj" secondAttribute="trailing" constant="20" id="ZIc-zg-sEZ"/>
+                                    <constraint firstItem="Hw1-mK-QSj" firstAttribute="top" secondItem="qpf-0L-SOp" secondAttribute="top" constant="40" id="jQD-7k-2iZ"/>
+                                    <constraint firstItem="Hw1-mK-QSj" firstAttribute="centerX" secondItem="qpf-0L-SOp" secondAttribute="centerX" id="lKh-i0-7La"/>
+                                    <constraint firstItem="Hw1-mK-QSj" firstAttribute="leading" secondItem="qpf-0L-SOp" secondAttribute="leading" constant="20" id="sYG-Hd-BJR"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question: 1/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-Wb-1Uc" userLabel="Current Question Number Label">
@@ -122,7 +123,7 @@
                         <outlet property="answerButton4" destination="LwW-9C-dVK" id="AGD-MW-1Dl"/>
                         <outlet property="categoryLabel" destination="8om-SX-dHE" id="J7s-Af-lav"/>
                         <outlet property="currentQuestionNumber" destination="O7N-Wb-1Uc" id="XtE-LT-b3u"/>
-                        <outlet property="questionLabel" destination="KQJ-uw-yRc" id="gxP-Rn-luC"/>
+                        <outlet property="questionText" destination="Hw1-mK-QSj" id="43n-ri-kU3"/>
                         <outlet property="questionWindow" destination="qpf-0L-SOp" id="eSo-cs-PVL"/>
                     </connections>
                 </viewController>
@@ -132,6 +133,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
