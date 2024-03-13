@@ -18,71 +18,92 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qpf-0L-SOp" userLabel="Question Container View">
-                                <rect key="frame" x="16" y="188" width="361" height="300"/>
+                                <rect key="frame" x="16" y="186" width="361" height="250"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Question label" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hw1-mK-QSj">
-                                        <rect key="frame" x="20" y="40" width="321" height="220"/>
+                                        <rect key="frame" x="20" y="40" width="321" height="170"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Hw1-mK-QSj" firstAttribute="centerY" secondItem="qpf-0L-SOp" secondAttribute="centerY" id="0r9-FO-cnH"/>
-                                    <constraint firstAttribute="bottom" secondItem="Hw1-mK-QSj" secondAttribute="bottom" constant="40" id="EgL-Ar-o5t"/>
-                                    <constraint firstAttribute="height" constant="300" id="UqV-gS-ef1"/>
                                     <constraint firstAttribute="width" constant="361" id="Y35-gE-p4r"/>
                                     <constraint firstAttribute="trailing" secondItem="Hw1-mK-QSj" secondAttribute="trailing" constant="20" id="ZIc-zg-sEZ"/>
                                     <constraint firstItem="Hw1-mK-QSj" firstAttribute="top" secondItem="qpf-0L-SOp" secondAttribute="top" constant="40" id="jQD-7k-2iZ"/>
                                     <constraint firstItem="Hw1-mK-QSj" firstAttribute="centerX" secondItem="qpf-0L-SOp" secondAttribute="centerX" id="lKh-i0-7La"/>
+                                    <constraint firstAttribute="height" constant="250" id="nma-ZN-uq2"/>
                                     <constraint firstItem="Hw1-mK-QSj" firstAttribute="leading" secondItem="qpf-0L-SOp" secondAttribute="leading" constant="20" id="sYG-Hd-BJR"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question: 1/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7N-Wb-1Uc" userLabel="Current Question Number Label">
                                 <rect key="frame" x="125" y="82" width="143" height="30"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0o-vz-fqS" userLabel="Answer Button 1">
-                                <rect key="frame" x="35" y="496" width="323" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="xck-Z5-Yaa"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Nl-wi-FUI" userLabel="Answer Button 2">
                                 <rect key="frame" x="35" y="563" width="323" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Rhq-Qe-YZc"/>
                                 </constraints>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton2:" destination="Kdn-Su-8aJ" eventType="touchUpInside" id="TNB-IG-bJB"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8S8-lv-3CO" userLabel="Answer Button 3">
                                 <rect key="frame" x="35" y="630" width="323" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Kwu-62-h4X"/>
                                 </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton2:" destination="Kdn-Su-8aJ" eventType="touchUpInside" id="tmy-FN-fv1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Music &amp; Entertainment" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8om-SX-dHE" userLabel="Category Label">
                                 <rect key="frame" x="97" y="120" width="199" height="24"/>
+                                <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwW-9C-dVK" userLabel="Answer Button 4">
                                 <rect key="frame" x="35" y="697" width="323" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="FmA-PG-rv0"/>
                                 </constraints>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton4:" destination="Kdn-Su-8aJ" eventType="touchUpInside" id="2Kk-wq-9W8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y0o-vz-fqS" userLabel="Answer Button 1">
+                                <rect key="frame" x="35" y="496" width="323" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xck-Z5-Yaa"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Button"/>
+                                <connections>
+                                    <action selector="didTapButton1:" destination="Kdn-Su-8aJ" eventType="touchUpInside" id="SAO-kc-VBo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fNq-P8-wwY"/>
@@ -90,8 +111,6 @@
                         <constraints>
                             <constraint firstItem="fNq-P8-wwY" firstAttribute="trailing" secondItem="y0o-vz-fqS" secondAttribute="trailing" constant="35" id="12g-9Y-ugT"/>
                             <constraint firstItem="qpf-0L-SOp" firstAttribute="leading" secondItem="fNq-P8-wwY" secondAttribute="leading" constant="16" id="5wX-Qh-dNo"/>
-                            <constraint firstItem="qpf-0L-SOp" firstAttribute="top" secondItem="8om-SX-dHE" secondAttribute="bottom" constant="38" id="8Kh-xc-oTr"/>
-                            <constraint firstItem="y0o-vz-fqS" firstAttribute="top" secondItem="qpf-0L-SOp" secondAttribute="bottom" constant="8" id="8TD-ez-TgP"/>
                             <constraint firstItem="8Nl-wi-FUI" firstAttribute="leading" secondItem="fNq-P8-wwY" secondAttribute="leading" constant="35" id="Cmw-Kg-edm"/>
                             <constraint firstAttribute="trailing" secondItem="qpf-0L-SOp" secondAttribute="trailing" constant="16" id="DH8-4U-lhn"/>
                             <constraint firstItem="LwW-9C-dVK" firstAttribute="top" secondItem="8S8-lv-3CO" secondAttribute="bottom" constant="17" id="Dpm-ZC-yeW"/>
@@ -103,9 +122,9 @@
                             <constraint firstItem="8S8-lv-3CO" firstAttribute="top" secondItem="8Nl-wi-FUI" secondAttribute="bottom" constant="17" id="VKI-k6-tlA"/>
                             <constraint firstItem="LwW-9C-dVK" firstAttribute="leading" secondItem="fNq-P8-wwY" secondAttribute="leading" constant="35" id="WOa-oi-Rva"/>
                             <constraint firstItem="LwW-9C-dVK" firstAttribute="centerX" secondItem="igq-Dg-cly" secondAttribute="centerX" id="WWW-yE-BkA"/>
-                            <constraint firstItem="8om-SX-dHE" firstAttribute="top" secondItem="O7N-Wb-1Uc" secondAttribute="bottom" constant="8" id="Wq6-D7-J5Y"/>
                             <constraint firstItem="fNq-P8-wwY" firstAttribute="trailing" secondItem="8Nl-wi-FUI" secondAttribute="trailing" constant="35" id="XT7-Cn-w9s"/>
                             <constraint firstItem="8S8-lv-3CO" firstAttribute="leading" secondItem="fNq-P8-wwY" secondAttribute="leading" constant="35" id="ZS2-N0-T1k"/>
+                            <constraint firstItem="qpf-0L-SOp" firstAttribute="top" secondItem="8om-SX-dHE" secondAttribute="bottom" constant="40" id="aEv-Jb-elx"/>
                             <constraint firstItem="8om-SX-dHE" firstAttribute="top" secondItem="O7N-Wb-1Uc" secondAttribute="bottom" constant="8" id="awf-35-k7l"/>
                             <constraint firstItem="O7N-Wb-1Uc" firstAttribute="centerX" secondItem="igq-Dg-cly" secondAttribute="centerX" id="eMp-sv-J5a"/>
                             <constraint firstItem="8S8-lv-3CO" firstAttribute="centerX" secondItem="igq-Dg-cly" secondAttribute="centerX" id="epu-PB-f4E"/>
@@ -114,6 +133,7 @@
                             <constraint firstItem="fNq-P8-wwY" firstAttribute="trailing" secondItem="LwW-9C-dVK" secondAttribute="trailing" constant="35" id="lYN-ds-IzV"/>
                             <constraint firstItem="8Nl-wi-FUI" firstAttribute="top" secondItem="y0o-vz-fqS" secondAttribute="bottom" constant="17" id="pYV-wh-fbX"/>
                             <constraint firstItem="y0o-vz-fqS" firstAttribute="centerX" secondItem="igq-Dg-cly" secondAttribute="centerX" id="rnh-Ir-kvw"/>
+                            <constraint firstItem="y0o-vz-fqS" firstAttribute="top" secondItem="qpf-0L-SOp" secondAttribute="bottom" constant="60" id="zQ9-Vg-EkJ"/>
                         </constraints>
                     </view>
                     <connections>
